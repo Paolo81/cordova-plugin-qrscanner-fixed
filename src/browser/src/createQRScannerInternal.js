@@ -4,8 +4,8 @@ var workerScript = require("raw-loader!../worker.min.js");
 module.exports = function(){
 
   var ELEMENTS = {
-    preview: 'cordova-plugin-qrscanner-video-preview',
-    still: 'cordova-plugin-qrscanner-still'
+    preview: 'cordova-plugin-qrscanner-fixed-video-preview',
+    still: 'cordova-plugin-qrscanner-fixed-still'
   };
   var ZINDEXES = {
     preview: -100,
