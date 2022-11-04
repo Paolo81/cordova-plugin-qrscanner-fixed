@@ -1,9 +1,9 @@
-[![Build Status](https://travis-ci.org/bitpay/cordova-plugin-qrscanner-fixed.svg?branch=master)](https://travis-ci.org/bitpay/cordova-plugin-qrscanner-fixed) [![npm](https://img.shields.io/npm/v/cordova-plugin-qrscanner-fixed.svg)](https://www.npmjs.com/package/cordova-plugin-qrscanner-fixed) [![npm](https://img.shields.io/npm/dm/cordova-plugin-qrscanner-fixed.svg)](https://www.npmjs.com/package/cordova-plugin-qrscanner-fixed)
-[![Dependency Status](https://david-dm.org/bitpay/cordova-plugin-qrscanner-fixed.svg)](https://david-dm.org/bitpay/cordova-plugin-qrscanner-fixed)
+[![Build Status](https://travis-ci.org/bitpay/cordova-plugin-qrscanner.svg?branch=master)](https://travis-ci.org/bitpay/cordova-plugin-qrscanner) [![npm](https://img.shields.io/npm/v/cordova-plugin-qrscanner.svg)](https://www.npmjs.com/package/cordova-plugin-qrscanner) [![npm](https://img.shields.io/npm/dm/cordova-plugin-qrscanner.svg)](https://www.npmjs.com/package/cordova-plugin-qrscanner)
+[![Dependency Status](https://david-dm.org/bitpay/cordova-plugin-qrscanner.svg)](https://david-dm.org/bitpay/cordova-plugin-qrscanner)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 
-Fork from https://github.com/bitpay/cordova-plugin-qrscanner-fixed
+Fork from https://github.com/bitpay/cordova-plugin-qrscanner
 
 # changes
 #### 1. Fixed ActivityCompat bug
@@ -19,7 +19,7 @@ Now you have to manually had this lines on your config.xml:
 
 
 
-# cordova-plugin-qrscanner-fixed
+# cordova-plugin-qrscanner
 A fast, energy efficient, highly-configurable QR code scanner for Cordova apps – available for the iOS, Android, Windows, and browser platforms.
 
 QRScanner's native camera preview is rendered behind the Cordova app's webview, and QRScanner provides `show` and `hide` methods to toggle the transparency of the webview's background. This allows for a completely HTML/CSS/JS interface to be built inside the webview to control the scanner.
@@ -27,14 +27,14 @@ QRScanner's native camera preview is rendered behind the Cordova app's webview, 
 ## Get Started
 
 ```bash
-cordova plugin add https://github.com/Paolo81/cordova-plugin-qrscanner-fixed-fixed.git
+cordova plugin add https://github.com/Paolo81/cordova-plugin-qrscanner-fixed.git
 ```
 
 Simply adding this plugin to the Cordova project will make the `window.QRScanner` global object available once the `deviceready` event propagates.
 
 ### Usage
 
-There are two primary steps to integrating `cordova-plugin-qrscanner-fixed`.
+There are two primary steps to integrating `cordova-plugin-qrscanner`.
 
 #### 1. Get Permission Early (Optional)
 
@@ -371,7 +371,7 @@ If you run into issues in your own project, try the test project in this repo to
 
 Unlike iOS, on Android >=6.0, permissions can be requested multiple times. If the user denies camera access, `status.denied` will remain `false` unless the user permanently denies by checking the `Never ask again` checkbox. Once `status.denied` is `true`, `openSettings()` is the only remaining option to grant camera permissions.
 
-Because of API limitations, `status.restricted` will always be false on the Android platform. See [#15](https://github.com/bitpay/cordova-plugin-qrscanner-fixed/issues/15) for details. Pull requests welcome!
+Because of API limitations, `status.restricted` will always be false on the Android platform. See [#15](https://github.com/bitpay/cordova-plugin-qrscanner/issues/15) for details. Pull requests welcome!
 
 ## Windows
 
@@ -427,7 +427,7 @@ On the `browser` platform, the `authorized` field is set to `true` if at least o
 On the browser platform, it's possible to adjust the interval at which QR decode attempts occur – even while a scan is happening. This enables applications to intellegently adjust scanning speed in different application states. QRScanner will check for the presence of the global variable `window.QRScanner_SCAN_INTERVAL` before scheduling each next QR decode. If not set, the default of `130` (milliseconds) is used.
 
 ## Typescript
-Type definitions for cordova-plugin-qrscanner-fixed are [available in the DefinitelyTyped project](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/cordova-plugin-qrscanner-fixed/cordova-plugin-qrscanner-fixed.d.ts).
+Type definitions for cordova-plugin-qrscanner are [available in the DefinitelyTyped project](https://github.com/DefinitelyTyped/DefinitelyTyped/blob/master/cordova-plugin-qrscanner/cordova-plugin-qrscanner.d.ts).
 
 ## Contributing &amp; Testing
 
@@ -443,7 +443,7 @@ Then setup the test project:
 npm run gen-tests
 ```
 
-This will create a new cordova project in the `cordova-plugin-test-projects` directory next to this repo, install `cordova-plugin-qrscanner-fixed`, and configure the [Cordova Plugin Test Framework](https://github.com/apache/cordova-plugin-test-framework). Once the platform tests are generated, the following commands are available:
+This will create a new cordova project in the `cordova-plugin-test-projects` directory next to this repo, install `cordova-plugin-qrscanner`, and configure the [Cordova Plugin Test Framework](https://github.com/apache/cordova-plugin-test-framework). Once the platform tests are generated, the following commands are available:
 
 - `npm run test:android`
 - `npm run test:browser`

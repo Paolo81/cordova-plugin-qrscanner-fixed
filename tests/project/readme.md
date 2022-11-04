@@ -1,12 +1,12 @@
-# cordova-plugin-qrscanner-fixed-tests
+# cordova-plugin-qrscanner-tests
 
-This is the Cordova Testing Framework project for `cordova-plugin-qrscanner-fixed`.
+This is the Cordova Testing Framework project for `cordova-plugin-qrscanner`.
 
-To generate this package, clone and `npm install` the `cordova-plugin-qrscanner-fixed`, and then run `npm run manual-tests` inside that project.
+To generate this package, clone and `npm install` the `cordova-plugin-qrscanner`, and then run `npm run manual-tests` inside that project.
 
-Becuase this project requires `cordova-plugin-qrscanner-fixed` and it's tests as plugins, building this project inside the `cordova-plugin-qrscanner-fixed` directory would cause an infinite recursion.
+Becuase this project requires `cordova-plugin-qrscanner` and it's tests as plugins, building this project inside the `cordova-plugin-qrscanner` directory would cause an infinite recursion.
 
-Since `cordova prepare` is not intended to handle this scenario (which may at some point be resolved/added by the Cordova CLI), this package is first copied into a sibling directory called `cordova-plugin-test-projects`. The path from the root of `cordova-plugin-qrscanner-fixed` is `../cordova-plugin-test-projects/cordova-plugin-qrscanner-fixed-tests/`.
+Since `cordova prepare` is not intended to handle this scenario (which may at some point be resolved/added by the Cordova CLI), this package is first copied into a sibling directory called `cordova-plugin-test-projects`. The path from the root of `cordova-plugin-qrscanner` is `../cordova-plugin-test-projects/cordova-plugin-qrscanner-tests/`.
 
 ## Running Tests
 
